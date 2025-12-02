@@ -1,5 +1,5 @@
 {
-  description = "FlakeWHAT! - Multi-devShell flake.";
+  description = "FlakeWHAT! Multi-devShell flake.";
 
   inputs = {
     flake-parts.url = "github:hercules-ci/flake-parts";
@@ -14,14 +14,21 @@
         { pkgs, system, ... }:
         {
           devShells.default = pkgs.mkShell {
-            name = "[FlakeWHAT!] default dev-shell";
+            name = "[WHAT!] default devShell.";
             buildInputs = with pkgs; [
             ];
           };
         };
 
       flake = {
-        templates = rec { };
+        templates = rec {
+          rust = {
+            path = ./templates/rust;
+            description = ''
+              [WHAT!] - A devShell template for Rust.
+            '';
+          };
+        };
       };
     };
 }
