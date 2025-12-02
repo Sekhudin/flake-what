@@ -1,3 +1,3 @@
-# \*Flake**\*WHAT!**
+# Flake**WHAT!**
 
 Multi-devShell flake.
