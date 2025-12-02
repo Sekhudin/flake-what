@@ -14,7 +14,7 @@
         { pkgs, system, ... }:
         {
           devShells.default = pkgs.mkShell {
-            name = "nix dev-shell";
+            name = "[FlakeWHAT!] default dev-shell";
             buildInputs = with pkgs; [
             ];
           };
