@@ -9,25 +9,14 @@
 
   outputs =
     inputs@{
-      self,
-      nixpkgs,
       flake-parts,
+      nixpkgs,
       ...
     }:
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = builtins.attrNames nixpkgs.legacyPackages;
       perSystem =
-        {
-          config,
-          self',
-          inputs',
-          pkgs,
-          system,
-          ...
-        }:
-        let
-          pkgs = nixpkgs.legacyPackages.${system};
-        in
+        { pkgs, ... }:
         {
           devShells.default = pkgs.mkShell {
             name = "[WHAT!] default rust-devShell";
