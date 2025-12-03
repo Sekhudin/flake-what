@@ -19,7 +19,8 @@
         { pkgs, ... }:
         {
           devShells.default = pkgs.mkShell {
-            name = "[WHAT!] default rust-devShell";
+            name = "Rust-devShell";
+            description = "[WHAT!] default rust-devShell";
             buildInputs = with pkgs; [
               cargo
               rustc
