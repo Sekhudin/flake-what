@@ -28,6 +28,13 @@
               [WHAT!] - A devShell template for Rust.
             '';
           };
+
+          node-pg = {
+            path = ./templates/node-pg;
+            description = ''
+              [WHAT!] - A devShell template for nodejs with postgres service.
+            ''
+          };
         };
       };
     };
