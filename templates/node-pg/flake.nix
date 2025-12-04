@@ -62,7 +62,13 @@
             );
         in
         {
-          devShells = mkShells "nodejs_";
+          devShells = mkShells "nodejs_" // {
+            default = pkgs.mkShell {
+              name = "Node-devShell";
+              description = "[WHAT!] nodejs_22-devShell";
+              buildInputs = [ pkgs.nodejs_22 ];
+            };
+          };
 
           process-compose.postgres = {
             imports = [ inputs.services-flake.processComposeModules.default ];
