@@ -1,2 +1,6 @@
+.direnv
+data
+
 templates/*/flake.lock
 templates/*/data
+templates/*/.direnv
