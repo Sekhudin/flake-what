@@ -33,7 +33,7 @@
             path = ./templates/node-pg;
             description = ''
               [WHAT!] - A devShell template for nodejs with postgres service.
-            ''
+            '';
           };
         };
       };
