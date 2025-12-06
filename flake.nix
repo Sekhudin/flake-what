@@ -35,6 +35,13 @@
               [WHAT!] - A devShell template for nodejs with postgres service.
             '';
           };
+
+          go-pg = {
+            path = ./templates/go-pg;
+            description = ''
+              [WHAT!] - A devShell template for golang with postgres service.
+            '';
+          };
         };
       };
     };
